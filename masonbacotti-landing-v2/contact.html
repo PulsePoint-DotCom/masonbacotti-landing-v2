@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Mason Bacotti">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://masonbacotti.com/contact">
+  <title>Contact — Mason Bacotti</title>
+  <link rel="icon" type="image/svg+xml" href="https://btwv.masonbacotti.com/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #ffffff; --surface: #f5f5f5; --border: #dddddd; --text: #1a1a1a; --text-sec: #666666; --accent: #ff6b35; --green: #00d26a; }
+    body { background: var(--bg); color: var(--text); font-family: 'IBM Plex Sans', sans-serif; line-height: 1.6; min-height: 100vh; }
+    body::before { content: ''; position: fixed; inset: 0; background-image: radial-gradient(circle, #ccc 1px, transparent 1px); background-size: 24px 24px; opacity: 0.05; pointer-events: none; z-index: 0; }
+    .container { max-width: 640px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+    header { border-bottom: 1px solid var(--border); padding: 24px 0; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .logo { display: flex; align-items: center; gap: 10px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.2rem; text-decoration: none; color: var(--text); }
+    .logo-icon { color: var(--accent); font-size: 1.3rem; }
+    nav { display: flex; gap: 24px; }
+    nav a { color: var(--text-sec); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    nav a:hover { color: var(--text); }
+    nav a.active { color: var(--accent); }
+    .page { padding: 60px 0; }
+    .page h1 { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; font-weight: 700; margin-bottom: 12px; }
+    .page .subtitle { color: var(--text-sec); margin-bottom: 40px; font-size: 1rem; }
+    .contact-methods { display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
+    .contact-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px 24px; display: flex; align-items: center; gap: 16px; text-decoration: none; color: var(--text); transition: border-color 0.2s, transform 0.2s; }
+    .contact-card:hover { border-color: var(--accent); transform: translateY(-1px); }
+    .contact-card-icon { font-size: 1.8rem; }
+    .contact-card-label { font-size: 0.75rem; color: var(--text-sec); font-family: 'IBM Plex Mono', monospace; text-transform: uppercase; letter-spacing: 0.5px; }
+    .contact-card-value { font-size: 1rem; font-weight: 600; }
+    .note { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; font-size: 0.9rem; color: var(--text-sec); }
+    .note strong { color: var(--text); }
+    footer { border-top: 1px solid var(--border); padding: 32px 0; text-align: center; color: var(--text-sec); font-size: 0.85rem; }
+    footer a { color: var(--text-sec); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+    footer nav { justify-content: center; margin-top: 12px; display: flex; gap: 24px; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container header-inner">
+    <a href="/" class="logo"><span class="logo-icon">⚡</span><span>masonbacotti</span></a>
+    <nav>
+      <a href="index.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </div>
+</header>
+<div class="container page">
+  <h1>Get in touch</h1>
+  <p class="subtitle">Have a question, project idea, or just want to say hi — reach out below.</p>
+
+  <div class="contact-methods">
+    <a href="https://btwv.masonbacotti.com/contact" class="contact-card" target="_blank" rel="noopener">
+      <div class="contact-card-icon">⚡</div>
+      <div>
+        <div class="contact-card-label">BTWV Contact</div>
+        <div class="contact-card-value">Before They Went Viral</div>
+      </div>
+    </a>
+    <a href="https://mathdrill.masonbacotti.com" class="contact-card" target="_blank" rel="noopener">
+      <div class="contact-card-icon">🧙‍♂️</div>
+      <div>
+        <div class="contact-card-label">Math Drill</div>
+        <div class="contact-card-value">mathdrill.masonbacotti.com</div>
+      </div>
+    </a>
+  </div>
+
+  <div class="note">
+    <strong>Note:</strong> I try to respond to all reasonable messages, but I may not be able to reply to every single one. No cold pitches or unsolicited offers, please.
+  </div>
+</div>
+<footer>
+  <div class="container">
+    <p>© 2026 masonbacotti</p>
+    <nav>
+      <a href="index.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
