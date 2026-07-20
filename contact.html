@@ -16,7 +16,7 @@
     :root { --bg: #ffffff; --surface: #f5f5f5; --border: #dddddd; --text: #1a1a1a; --text-sec: #666666; --accent: #ff6b35; --green: #00d26a; }
     body { background: var(--bg); color: var(--text); font-family: 'IBM Plex Sans', sans-serif; line-height: 1.6; min-height: 100vh; }
     body::before { content: ''; position: fixed; inset: 0; background-image: radial-gradient(circle, #ccc 1px, transparent 1px); background-size: 24px 24px; opacity: 0.05; pointer-events: none; z-index: 0; }
-    .container { max-width: 640px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+    .container { max-width: 700px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
     header { border-bottom: 1px solid var(--border); padding: 24px 0; }
     .header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
     .logo { display: flex; align-items: center; gap: 10px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.2rem; text-decoration: none; color: var(--text); }
@@ -26,15 +26,11 @@
     nav a:hover { color: var(--text); }
     nav a.active { color: var(--accent); }
     .page { padding: 60px 0; }
-    .page h1 { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; font-weight: 700; margin-bottom: 12px; }
-    .page .subtitle { color: var(--text-sec); margin-bottom: 40px; font-size: 1rem; }
-    .contact-methods { display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
-    .contact-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px 24px; display: flex; align-items: center; gap: 16px; text-decoration: none; color: var(--text); transition: border-color 0.2s, transform 0.2s; }
-    .contact-card:hover { border-color: var(--accent); transform: translateY(-1px); }
-    .contact-card-icon { font-size: 1.8rem; }
-    .contact-card-label { font-size: 0.75rem; color: var(--text-sec); font-family: 'IBM Plex Mono', monospace; text-transform: uppercase; letter-spacing: 0.5px; }
-    .contact-card-value { font-size: 1rem; font-weight: 600; }
-    .note { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; font-size: 0.9rem; color: var(--text-sec); }
+    .page h1 { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
+    .page .subtitle { color: var(--text-sec); margin-bottom: 32px; font-size: 1rem; }
+    .form-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .form-card iframe { width: 100%; height: 650px; border: none; display: block; }
+    .note { margin-top: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; font-size: 0.9rem; color: var(--text-sec); }
     .note strong { color: var(--text); }
     footer { border-top: 1px solid var(--border); padding: 32px 0; text-align: center; color: var(--text-sec); font-size: 0.85rem; }
     footer a { color: var(--text-sec); text-decoration: none; }
@@ -45,33 +41,22 @@
 <body>
 <header>
   <div class="container header-inner">
-    <a href="/" class="logo"><span class="logo-icon">⚡</span><span>masonbacotti</span></a>
+    <a href="home.html" class="logo"><span class="logo-icon">⚡</span><span>masonbacotti</span></a>
     <nav>
+      <a href="home.html">Home</a>
       <a href="index.html">Projects</a>
       <a href="about.html">About</a>
       <a href="contact.html" class="active">Contact</a>
+      <a href="privacy.html">Privacy</a>
     </nav>
   </div>
 </header>
 <div class="container page">
   <h1>Get in touch</h1>
-  <p class="subtitle">Have a question, project idea, or just want to say hi — reach out below.</p>
+  <p class="subtitle">Have a question, project idea, or just want to say hi — fill out the form below.</p>
 
-  <div class="contact-methods">
-    <a href="https://btwv.masonbacotti.com/contact" class="contact-card" target="_blank" rel="noopener">
-      <div class="contact-card-icon">⚡</div>
-      <div>
-        <div class="contact-card-label">BTWV Contact</div>
-        <div class="contact-card-value">Before They Went Viral</div>
-      </div>
-    </a>
-    <a href="https://mathdrill.masonbacotti.com" class="contact-card" target="_blank" rel="noopener">
-      <div class="contact-card-icon">🧙‍♂️</div>
-      <div>
-        <div class="contact-card-label">Math Drill</div>
-        <div class="contact-card-value">mathdrill.masonbacotti.com</div>
-      </div>
-    </a>
+  <div class="form-card">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf5V1REwFmg1asfx4qmNWPxzAjwfUJpFc8dpiunUb_OBDC4qw/viewform?usp=sf_link" loading="lazy">Loading...</iframe>
   </div>
 
   <div class="note">
@@ -82,9 +67,11 @@
   <div class="container">
     <p>© 2026 masonbacotti</p>
     <nav>
+      <a href="home.html">Home</a>
       <a href="index.html">Projects</a>
       <a href="about.html">About</a>
       <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </footer>
