@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mason Bacotti — High schooler building internet projects. Tools that track viral trends, gamify learning, and deliver daily signals.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://masonbacotti.com/home">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://masonbacotti.com/home">
+  <meta property="og:title" content="Mason Bacotti — Internet Projects">
+  <meta property="og:description" content="High schooler building internet projects. PulsePoint, Math Drill, BTWV, and more.">
+  <meta name="twitter:card" content="summary">
+  <title>Mason Bacotti — Internet Projects</title>
+  <link rel="icon" type="image/svg+xml" href="https://btwv.masonbacotti.com/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #ffffff;
+      --surface: #f5f5f5;
+      --border: #dddddd;
+      --text: #1a1a1a;
+      --text-sec: #666666;
+      --accent: #ff6b35;
+      --green: #00d26a;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'IBM Plex Sans', sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(circle, #ccc 1px, transparent 1px);
+      background-size: 24px 24px;
+      opacity: 0.05;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 24px 0;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .logo-icon { color: var(--accent); font-size: 1.3rem; }
+
+    nav {
+      display: flex;
+      gap: 24px;
+    }
+
+    nav a {
+      color: var(--text-sec);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--text); }
+    nav a.active { color: var(--accent); }
+
+    /* HERO */
+    .hero {
+      padding: 72px 0 0;
+      text-align: center;
+    }
+
+    .hero-eyebrow {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span { color: var(--accent); }
+
+    .hero-pitch {
+      color: var(--text-sec);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 16px;
+      line-height: 1.7;
+    }
+
+    .hero-pitch strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .hero-pitch .accent { color: var(--accent); font-weight: 600; }
+
+    .hero-tags {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .hero-tag {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 0.8rem;
+      color: var(--text-sec);
+      font-family: 'IBM Plex Mono', monospace;
+    }
+
+    .hero-tag:first-child { border-color: var(--accent); color: var(--accent); }
+
+    /* MISSION */
+    .mission {
+      padding: 64px 0 72px;
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .mission-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 16px;
+    }
+
+    .mission h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+
+    .mission-body {
+      color: var(--text-sec);
+      font-size: 1rem;
+      line-height: 1.75;
+      margin-bottom: 32px;
+    }
+
+    .mission-body p { margin-bottom: 14px; }
+    .mission-body p:last-child { margin-bottom: 0; }
+    .mission-body strong { color: var(--text); font-weight: 600; }
+    .mission-body .accent { color: var(--accent); font-weight: 600; }
+
+    .mission-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    .pillar {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 16px;
+    }
+
+    .pillar-icon { font-size: 1.6rem; margin-bottom: 8px; }
+
+    .pillar-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .pillar-text {
+      font-size: 0.8rem;
+      color: var(--text-sec);
+      line-height: 1.5;
+    }
+
+    .divider {
+      width: 48px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+      margin: 0 auto 48px;
+    }
+
+    /* CTA */
+    .cta-section {
+      padding: 0 0 80px;
+      text-align: center;
+    }
+
+    .cta-section a {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 12px 28px;
+      border-radius: 8px;
+      transition: opacity 0.2s;
+    }
+
+    .cta-section a:hover { opacity: 0.85; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0;
+      text-align: center;
+      color: var(--text-sec);
+      font-size: 0.85rem;
+    }
+
+    footer a { color: var(--text-sec); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+    footer nav { justify-content: center; margin-top: 12px; }
+
+    @media (max-width: 700px) {
+      .mission-pillars { grid-template-columns: 1fr; }
+      .hero { padding: 48px 0 0; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a href="/" class="logo">
+      <span class="logo-icon">⚡</span>
+      <span>masonbacotti</span>
+    </a>
+    <nav>
+      <a href="home.html" class="active">Home</a>
+      <a href="index.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <p class="hero-eyebrow">Mason Bacotti — Internet Projects</p>
+    <h1>Building the internet,<br><span>one project at a time.</span></h1>
+    <div class="divider"></div>
+    <p class="hero-pitch">
+      High schooler building tools that <strong>track what's about to go viral</strong>,
+      <strong>gamify learning</strong>, and <strong>deliver daily signals</strong> —
+      all from scratch, deployed fast, and built for real people.
+    </p>
+    <p class="hero-pitch">
+      Every project starts with a simple idea: <span class="accent">what if the internet could tell you what was coming before it happened?</span>
+    </p>
+    <div class="hero-tags">
+      <span class="hero-tag">⚡ PulsePoint</span>
+      <span class="hero-tag">🧙‍♂️ Math Drill</span>
+      <span class="hero-tag">🌪️ BTWV</span>
+      <span class="hero-tag">Built with AI</span>
+      <span class="hero-tag">Deployed on Cloudflare</span>
+    </div>
+  </div>
+</section>
+
+<section class="mission">
+  <div class="container">
+    <p class="mission-label">What's this all about</p>
+    <h2>Built by a teenager.<br>Made for the internet.</h2>
+    <div class="mission-body">
+      <p>
+        <strong>Mason Bacotti</strong> is a high schooler in New York who got tired of waiting for someone else to build the tools he wished existed — so he started building them himself.
+      </p>
+      <p>
+        <span class="accent">masonbacotti.com</span> is home to his internet projects: apps that track what's about to go viral, tools that make learning feel like a game, and experiments that push the boundaries of what a student can build on the web.
+      </p>
+      <p>
+        No venture capital. No enterprise team. Just <strong>an 8th grader with a laptop, curiosity, and a willingness to ship</strong>. Everything here is built fast, deployed free, and made for real people — not investors.
+      </p>
+    </div>
+    <div class="mission-pillars">
+      <div class="pillar">
+        <div class="pillar-icon">🚀</div>
+        <div class="pillar-title">Ship Fast</div>
+        <div class="pillar-text">Ideas go from brain to browser in days, not months. Speed is the only edge that matters when you're learning.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🧠</div>
+        <div class="pillar-title">Learn in Public</div>
+        <div class="pillar-text">Every project teaches something new. The codebase is the portfolio. The deployed URL is the grade.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">⚡</div>
+        <div class="pillar-title">Build for Real</div>
+        <div class="pillar-text">Tools people actually use — not demos. If it helps one person online, it's already a success.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <a href="index.html">View all projects →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 masonbacotti</p>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="index.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
