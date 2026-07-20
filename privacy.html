@@ -25,12 +25,16 @@
     nav a { color: var(--text-sec); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
     nav a:hover { color: var(--text); }
     nav a.active { color: var(--accent); }
-    .page { padding: 60px 0; }
-    .page h1 { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; font-weight: 700; margin-bottom: 24px; }
+    .page { padding: 60px 0 80px; }
+    .page h1 { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
+    .page .updated { color: var(--text-sec); font-size: 0.85rem; margin-bottom: 32px; font-family: 'IBM Plex Mono', monospace; }
     .page p { color: var(--text-sec); margin-bottom: 16px; font-size: 1rem; line-height: 1.7; }
-    .page h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; margin: 28px 0 10px; color: var(--text); }
+    .page h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; margin: 32px 0 10px; color: var(--text); }
     .page ul { margin: 12px 0 16px 20px; }
     .page li { color: var(--text-sec); margin-bottom: 8px; font-size: 0.95rem; }
+    .page a { color: var(--accent); text-decoration: none; }
+    .page a:hover { text-decoration: underline; }
+    .note-box { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 6px; padding: 16px 20px; margin: 24px 0; font-size: 0.9rem; color: var(--text-sec); }
     footer { border-top: 1px solid var(--border); padding: 32px 0; text-align: center; color: var(--text-sec); font-size: 0.85rem; }
     footer a { color: var(--text-sec); text-decoration: none; }
     footer a:hover { color: var(--text); }
@@ -40,50 +44,77 @@
 <body>
 <header>
   <div class="container header-inner">
-    <a href="/" class="logo"><span class="logo-icon">⚡</span><span>masonbacotti</span></a>
+    <a href="home.html" class="logo"><span class="logo-icon">⚡</span><span>masonbacotti</span></a>
     <nav>
+      <a href="home.html">Home</a>
       <a href="index.html">Projects</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
+      <a href="privacy.html" class="active">Privacy</a>
     </nav>
   </div>
 </header>
 <div class="container page">
   <h1>Privacy Policy</h1>
-  <p>Last updated: July 3, 2026</p>
+  <p class="updated">Last updated: July 15, 2026</p>
 
-  <p>This Privacy Policy describes how masonbacotti.com ("we," "our," or "this site") handles information.</p>
+  <p>This Privacy Policy describes how <strong>masonbacotti.com</strong> ("we," "our," or "this site") handles information.</p>
+
+  <div class="note-box">
+    <strong>Short version:</strong> This is a static site. We don't collect your data. The only third-party services we use are Google AdSense (for ads) and Cloudflare (for hosting/security). Each has their own privacy policy.
+  </div>
 
   <h2>Information We Collect</h2>
-  <p>This site is a static informational website. We do not collect, store, or process any personal data from visitors.</p>
-  <p>Some pages may use third-party services:</p>
+  <p>This site is a static informational website. <strong>We do not collect, store, or process any personal data</strong> from visitors.</p>
+
+  <h2>Third-Party Services</h2>
+  <p>Some pages use third-party services:</p>
   <ul>
-    <li><strong>Cloudflare</strong> — used for hosting and DNS. Their privacy policy applies.</li>
-    <li><strong>Google Analytics / Google AdSense</strong> — may be used on some subdomains. Their privacy policies apply.</li>
-    <li><strong>Cloudflare Pages</strong> — our hosting provider. Their privacy policy applies.</li>
+    <li><strong>Cloudflare</strong> — used for hosting, DNS, and security. <a href="https://www.cloudflare.com/privacy/" target="_blank" rel="noopener">Cloudflare Privacy Policy →</a></li>
+    <li><strong>Google AdSense</strong> — used to display advertisements on some pages. Google uses cookies and device identifiers to serve ads based on your prior visits to this site and other websites. You can opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ads Settings →</a>. <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses data from sites using its services →</a></li>
+    <li><strong>Google Fonts</strong> — used to load fonts on this site. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy →</a></li>
   </ul>
 
   <h2>Cookies</h2>
-  <p>We do not use first-party cookies. Third-party services (Google, Cloudflare) may use their own cookies per their respective policies.</p>
+  <p><strong>We do not use first-party cookies.</strong> Third-party services (Google AdSense, Cloudflare) may use their own cookies per their respective policies. Google AdSense may use cookies for ad targeting and measurement.</p>
+
+  <h2>Advertising</h2>
+  <p>Google AdSense displays advertisements on some pages of this site. Google may collect information about your visit to display relevant ads. This includes:</p>
+  <ul>
+    <li>Information about your browser and device</li>
+    <li>Pages you visit on this site</li>
+    <li>Ads you clicked on before coming here</li>
+  </ul>
+  <p>You can opt out of interest-based advertising at any time: <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ads Settings →</a></p>
 
   <h2>Links to Other Sites</h2>
-  <p>This site contains links to external projects (e.g., btwv.masonbacotti.com, mathdrill.masonbacotti.com). Those sites have their own privacy policies.</p>
+  <p>This site contains links to external projects (e.g., <strong>pulsepoint.masonbacotti.com</strong>, <strong>mathdrill.masonbacotti.com</strong>, <strong>btwv.masonbacotti.com</strong>). Those sites have their own privacy policies.</p>
 
   <h2>Children's Privacy</h2>
-  <p>We do not knowingly collect data from children under 13.</p>
+  <p>We do not knowingly collect data from children under 13. Our projects are designed for general audiences.</p>
+
+  <h2>Your Rights</h2>
+  <p>Depending on your location, you may have the right to:</p>
+  <ul>
+    <li>Opt out of personalized advertising (use <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ads Settings →</a>)</li>
+    <li>Request deletion of any data Google has collected about you</li>
+    <li>Restrict how your data is used</li>
+  </ul>
 
   <h2>Changes to This Policy</h2>
-  <p>We may update this Privacy Policy from time to time. Changes will be posted on this page.</p>
+  <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last updated" date.</p>
 
   <h2>Contact</h2>
-  <p>For questions about this Privacy Policy, contact via the <a href="contact.html" style="color:var(--accent);">Contact page</a>.</p>
+  <p>For questions about this Privacy Policy, contact via the <a href="contact.html">Contact page</a>.</p>
 </div>
 <footer>
   <div class="container">
     <p>© 2026 masonbacotti</p>
     <nav>
+      <a href="home.html">Home</a>
       <a href="index.html">Projects</a>
       <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
       <a href="contact.html">Contact</a>
     </nav>
   </div>
